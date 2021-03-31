@@ -40,22 +40,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var cold_count = 0; //declares variable that keeps track of how many cold options are chosen; starts at 0//
        
 	function allergyAdd(){ //declares function that adds to the allergy_count//
-            allergy_count = allergy_count + 1; //explicitly//
-		alert(allergy_count); 
+            allergy_count = allergy_count + 1; //codes for the change in allergy_count after an allergy option is chosen//
+		alert(allergy_count); //codes for pop-up that appears after clicking an option//
     
 	}
  
-	function coldAdd(){
-            cold_count = cold_count + 1;
-		alert(cold_count);
+	function coldAdd(){ //declares function that adds to the cold_count//
+            cold_count = cold_count + 1; //codes for the change in cold_count after a cold option is chosen//
+		alert(cold_count); //codes for pop-up that appears after clicking an option//
       
 	}
 
- 	function generateResults(){
- 		var allergyPercent = (allergy_count / 6) * 100;
- 		var coldPercent = (cold_count / 6) * 100;
- 		var resultText = document.getElementById("results");
- 		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+ 	function generateResults(){ //declares function that generates results//
+ 		var allergyPercent = (allergy_count / 6) * 100; //declares variable that shows percentage of liklihood of allergy; equation codes for calculation//
+ 		var coldPercent = (cold_count / 6) * 100; //declares variable that shows percentage of liklihood of cold; equation codes for calculation//
+ 		var resultText = document.getElementById("results"); //turns results into text//
+ 		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; //codes for the structure of the results//
 
 	}
 
