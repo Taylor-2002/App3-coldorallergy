@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Taylor Tran
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -20,7 +20,8 @@ Brief Description of Goal of Code:
 Create an app that can determine whether the user is experiencing cold or allergy symptoms. The app will flip through a series of questions and give a probability of whether it is a cold or allergies depending on the answers given.
  
 Known Issues:
-NNNNNNNNNNNNNNNN
+None :)
+
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -32,32 +33,41 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
+
+	
 <script>
         var allergy_count = 0;
         var cold_count = 0;
-        function allergyAdd(){
+       
+	function allergyAdd(){
             allergy_count = allergy_count + 1;
 		alert(allergy_count);
-        }
-        function coldAdd(){
+    
+	}
+ 
+	function coldAdd(){
             cold_count = cold_count + 1;
 		alert(cold_count);
-         }
+      
+	}
 
  	function generateResults(){
- 		var allergyPercent = (allergy_count / 6) x 100;
- 		var coldPercent = (cold_count / 6) x 100;
  		var allergyPercent = (allergy_count / 6) * 100;
  		var coldPercent = (cold_count / 6) * 100;
  		var resultText = document.getElementById("results");
  		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
 
 	}
-  </script>
+
+	</script>
+
+	
 <style>	
 .body {
      margin: 0em;
+
 }
+	
 .page {
     width: 100vw;
     height: 100vh;
@@ -67,12 +77,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     overflow-y: auto;
     z-index: 0;
     background-color: hsl(0,0%,100%);
+
 }
+	
   .page:target {
     left: 0vw;
     z-index: 1;
+
 }
 </style>
+
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Cold or Allergies?</h1>
@@ -86,6 +100,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
@@ -97,6 +112,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<a href="#two" onclick="coldAdd();" class="w3-btn w3-grey w3-round"> No</a>
     	</div>
 </div>
+
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
@@ -108,6 +124,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<a href="#three" onclick="allergyAdd();" class="w3-btn w3-grey w3-round"> No</a>
 	</div>
 </div>	
+
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
@@ -119,7 +136,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<a href="#four" onclick="allergyAdd();" class="w3-btn w3-grey w3-round"> No</a>
 	</div>
 </div>
-	<div class="page" id="four">
+	
+<div class="page" id="four">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
@@ -130,6 +148,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<a href="#five" onclick="coldAdd();" class="w3-btn w3-grey w3-round"> No</a>
 	</div>
 </div>
+
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 5</h1>
@@ -141,6 +160,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<a href="#six" onclick="allergyAdd();" class="w3-btn w3-grey w3-round"> No</a>
 	</div>
 </div>
+
 <div class="page" id="six">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 6</h1>
@@ -152,6 +172,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<a href="#seven" onclick="coldAdd();" class="w3-btn w3-grey w3-round"> No</a>
 	</div>
 </div>
+
 <div class="page" id="seven">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
@@ -161,6 +182,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#eight" onclick="generateResults();" class="w3-btn w3-grey w3-round"> Results </a>
 	</div>
 </div>
+
 <div class="page" id="eight">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
